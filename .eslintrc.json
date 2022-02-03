@@ -1,0 +1,99 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true
+  },
+  "parser": "",
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "ignorePatterns": [
+    "*.js",
+    "*.d.ts",
+    "*.component.html",
+    "*.generated.ts"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.test.ts",
+        "*.spec.ts"
+      ],
+      "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint",
+        "simple-import-sort",
+        "prettier",
+        "node"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+      },
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "ignoreComments": true,
+            "ignoreUrls": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+          }
+        ],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ],
+        "complexity": [
+          "error",
+          {
+            "max": 200
+          }
+        ],
+        "spaced-comment": [
+          2,
+          "always"
+        ]
+      },
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": [
+        "*.test.ts",
+        "*.spec.ts"
+      ],
+      "env": {
+        "node": true,
+        "jest": true
+      }
+    }
+  ]
+}
