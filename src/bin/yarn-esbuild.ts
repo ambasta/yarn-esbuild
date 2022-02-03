@@ -1,6 +1,6 @@
 import pino from "pino";
 
-import { initCLI } from "../src/cli/index";
+import { initCLI } from "../lib/cli.js";
 
 const logger = pino({
   name: "esbuild",

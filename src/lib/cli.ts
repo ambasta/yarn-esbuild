@@ -376,7 +376,7 @@ const parseCLIArguments = async (parser: Argv) =>
   );
 
 const initCLI = async () => {
-  const argv = await parseCLIArguments(yargs);
+  const argv = await parseCLIArguments(yargs(process.argv.slice(2)));
   // eslint-disable-next-line no-console
   console.log(argv.argv);
   return 0;
