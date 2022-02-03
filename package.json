@@ -11,7 +11,7 @@
     "build": "yarn clean && tsc",
     "watch": "yarn clean && tsc --watch",
     "lint": "yarn eslint",
-    "invoke": "node dist/bin/yarn-esbuild"
+    "invoke": "yarn build && node dist/bin/yarn-esbuild"
   },
   "dependencies": {
     "@yarnpkg/esbuild-plugin-pnp": "^2.0.1-rc.2",
