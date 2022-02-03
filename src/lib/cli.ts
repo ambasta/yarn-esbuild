@@ -41,6 +41,8 @@ enum LogLevel {
 const setUsage = (parser: Argv) =>
   parser.usage("Usage: esbuild [options] [entry points]");
 
+// const setInfo = (parser: Argv);
+
 const setCommonArguments = (parser: Argv) =>
   parser
     .option("bundle", {

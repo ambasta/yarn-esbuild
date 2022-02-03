@@ -1,31 +1,39 @@
 {
   "name": "@ambasta/yarn-esbuild",
   "packageManager": "yarn@3.1.1",
-  "main": "./dist/src/main.js",
-  "bin": {
-    "esbuild": "./dist/src/bin/yarn-esbuild"
-  },
-  "exports": {
-    "./*": "./dist/src/*"
-  },
-  "typesVersions": {
-    "*": {
-      "*": {
-        "*": [
-          "dist/src/*"
-        ]
-      }
-    }
-  },
+  "version": "1.0.0",
+  "description": "wrapper for esbuild to provide yarn plugins via cli",
+  "author": "Amit Prakash Ambasta @ambasta",
+  "bin": "./dist/src/bin/run",
+  "homepage": "https://github.com/ambasta/yarn-esbuild",
+  "bugs": "https://github.com/ambasta/yarn-esbuild/issues",
+  "licence": "GPL-3.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "ambasta/yarn-esbuild",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
   "type": "module",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "yarn clean && tsc",
+    "build": "yarn clean && tsc -b",
     "watch": "yarn clean && tsc --watch",
     "lint": "yarn eslint",
-    "invoke": "yarn build && node dist/src/bin/yarn-esbuild"
+    "invoke": "yarn build && node dist/src/bin/yarn-esbuild",
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
   },
   "dependencies": {
+    "@oclif/core": "^1.3.0",
+    "@oclif/plugin-help": "^5.1.11",
+    "@oclif/plugin-plugins": "^2.1.0",
     "@yarnpkg/esbuild-plugin-pnp": "^2.0.1-rc.2",
     "colorette": "^2.0.16",
     "compare-versions": "^4.1.3",
@@ -57,11 +65,27 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^27.4.7",
+    "oclif": "^2.4.3",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5",
     "typescript-language-server": "^0.9.6",
     "vscode-langservers-extracted": "^4.0.0"
+  },
+  "oclif": {
+    "bin": "yarn-esbuild",
+    "dirname": "yarn-esbuild",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "esbuild": {
+        "description": "Build and optimize your JavaScript code"
+      }
+    }
   }
 }
