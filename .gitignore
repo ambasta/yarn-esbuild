@@ -21,3 +21,6 @@
 /lib
 /tmp
 oclif.manifest.json
+
+# Temp ignores
+/oldsrc
