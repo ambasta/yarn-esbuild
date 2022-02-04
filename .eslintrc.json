@@ -31,10 +31,12 @@
         "*.spec.ts"
       ],
       "extends": [
-        "airbnb-base",
-        "airbnb-typescript/base",
+        "oclif",
+        "oclif-typescript",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "airbnb-base",
+        "airbnb-typescript/base"
       ],
       "parser": "@typescript-eslint/parser",
       "plugins": [
@@ -62,6 +64,7 @@
         ],
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
+        "@typescript-eslint/quotes": "double",
         "@typescript-eslint/no-unused-vars": [
           "error",
           {

@@ -1,3 +1,1 @@
-import { run } from "@oclif/core";
-
-export default run;
+export { Errors, run } from "@oclif/core";

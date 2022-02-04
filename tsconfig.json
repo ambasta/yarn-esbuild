@@ -12,7 +12,7 @@
     "experimentalDecorators": true,
     "extendedDiagnostics": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
+    "incremental": false,
     "importHelpers": true,
     "inlineSourceMap": false,
     "inlineSources": true,
@@ -46,12 +46,14 @@
     "stripInternal": true,
     "target": "ESNext",
     "types": [
-      "node",
-      "jest"
+      "node"
     ],
     "useUnknownInCatchVariables": true
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "oldsrc/**/*"
   ]
 }
