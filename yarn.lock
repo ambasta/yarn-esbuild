@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 6
+  version: 5
   cacheKey: 8
 
 "@ambasta/yarn-esbuild@workspace:.":
@@ -10,22 +10,20 @@ __metadata:
   resolution: "@ambasta/yarn-esbuild@workspace:."
   dependencies:
     "@oclif/core": ^1.3.0
-    "@oclif/plugin-help": ^5
-    "@oclif/plugin-plugins": ^2.0.1
-    "@oclif/plugin-version": ^1.0.4
-    "@oclif/test": ^2
+    "@oclif/plugin-help": ^5.1.11
+    "@oclif/plugin-plugins": ^2.1.0
     "@types/eslint": ^8.4.1
     "@types/node": ^17.0.14
     "@types/prettier": ^2.4.3
     "@typescript-eslint/eslint-plugin": ^5.10.2
     "@typescript-eslint/parser": ^5.10.2
-    "@yarnpkg/esbuild-plugin-pnp": ^2
+    "@yarnpkg/esbuild-plugin-pnp": ^2.0.1-rc.2
     chai: ^4.3.6
     esbuild: ^0.14.18
     eslint: ^8.8.0
     eslint-config-airbnb-base: ^15.0.0
     eslint-config-airbnb-typescript: ^16.1.0
-    eslint-config-oclif: ^4
+    eslint-config-oclif: ^4.0.0
     eslint-config-oclif-typescript: ^1.0.2
     eslint-config-prettier: ^8.3.0
     eslint-import-resolver-node: ^0.3.6
@@ -38,7 +36,7 @@ __metadata:
     eslint-plugin-unicorn: ^40.1.0
     globby: ^13.1.1
     mocha: ^9.2.0
-    oclif: ^2
+    oclif: ^2.4.3
     pino: ^7.6.5
     prettier: ^2.5.1
     rimraf: ^3.0.2
@@ -568,7 +566,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^1.0.8, @oclif/core@npm:^1.1.1, @oclif/core@npm:^1.2.0, @oclif/core@npm:^1.2.1, @oclif/core@npm:^1.3.0":
+"@oclif/core@npm:^1.0.8, @oclif/core@npm:^1.2.0, @oclif/core@npm:^1.2.1, @oclif/core@npm:^1.3.0":
   version: 1.3.0
   resolution: "@oclif/core@npm:1.3.0"
   dependencies:
@@ -612,7 +610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-help@npm:^5, @oclif/plugin-help@npm:^5.1.10":
+"@oclif/plugin-help@npm:^5.1.10, @oclif/plugin-help@npm:^5.1.11":
   version: 5.1.11
   resolution: "@oclif/plugin-help@npm:5.1.11"
   dependencies:
@@ -633,7 +631,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-plugins@npm:^2.0.1":
+"@oclif/plugin-plugins@npm:^2.1.0":
   version: 2.1.0
   resolution: "@oclif/plugin-plugins@npm:2.1.0"
   dependencies:
@@ -649,15 +647,6 @@ __metadata:
     tslib: ^2.0.0
     yarn: ^1.22.17
   checksum: 234a34c9e2bf8c97181a3a990b295a41717e0e7d0c24779e2b08997b3631fed07bce117d17b657874a953e6b7dfcfffd78664fdfbef62c87146e919660658320
-  languageName: node
-  linkType: hard
-
-"@oclif/plugin-version@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@oclif/plugin-version@npm:1.0.4"
-  dependencies:
-    "@oclif/core": ^1.1.1
-  checksum: 38032b6b371e7bab81418807efb906e23d4fda3c5526d1c2bf13c299f3a21cc5c5704162785b9775af072065c7b6ed525147c7391dc69e7a2a0a8e0a905bc552
   languageName: node
   linkType: hard
 
@@ -680,15 +669,6 @@ __metadata:
   version: 3.0.2
   resolution: "@oclif/screen@npm:3.0.2"
   checksum: 962678c65f1cf5b06864295a212020e3ddda36ab37190ca317e938943325a5acdbf3cb2761c371612daf1565e397fa5ff7bd0563887d746ccfde7c4ab312f005
-  languageName: node
-  linkType: hard
-
-"@oclif/test@npm:^2":
-  version: 2.0.3
-  resolution: "@oclif/test@npm:2.0.3"
-  dependencies:
-    fancy-test: ^2.0.0
-  checksum: 914584720bbc5f0011ac45d09acf2ccec8ba084015356a39acf085ddfbc4f5cbfd35b59f00eaa19960f4ab1eab8c09bad0fedda803914bcf56ee9121ac5e646f
   languageName: node
   linkType: hard
 
@@ -823,24 +803,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/commons@npm:^1.7.0":
-  version: 1.8.3
-  resolution: "@sinonjs/commons@npm:1.8.3"
-  dependencies:
-    type-detect: 4.0.8
-  checksum: 6159726db5ce6bf9f2297f8427f7ca5b3dff45b31e5cee23496f1fa6ef0bb4eab878b23fb2c5e6446381f6a66aba4968ef2fc255c1180d753d4b8c271636a2e5
-  languageName: node
-  linkType: hard
-
-"@sinonjs/fake-timers@npm:^7.1.0":
-  version: 7.1.2
-  resolution: "@sinonjs/fake-timers@npm:7.1.2"
-  dependencies:
-    "@sinonjs/commons": ^1.7.0
-  checksum: c84773d7973edad5511a31d2cc75023447b5cf714a84de9bb50eda45dda88a0d3bd2c30bf6e6e936da50a048d5352e2151c694e13e59b97d187ba1f329e9a00c
-  languageName: node
-  linkType: hard
-
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -852,13 +814,6 @@ __metadata:
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
-  languageName: node
-  linkType: hard
-
-"@types/chai@npm:*":
-  version: 4.3.0
-  resolution: "@types/chai@npm:4.3.0"
-  checksum: 3e393e094263db65df28a0123dc13f342937c1bab6cd173eae913d593c5b9a16b555713a08c34863a1fbf079aa7222b96197c70380a5c130549d6b2f6845a989
   languageName: node
   linkType: hard
 
@@ -910,13 +865,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:*":
-  version: 4.14.178
-  resolution: "@types/lodash@npm:4.14.178"
-  checksum: a69a04a60bfc5257c3130a554b4efa0c383f0141b7b3db8ab7cf07ad2a46ea085fce66d0242da41da7e5647b133d5dfb2c15add9cbed8d7fef955e4a1e5b3128
-  languageName: node
-  linkType: hard
-
 "@types/minimatch@npm:*, @types/minimatch@npm:^3.0.3":
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
@@ -949,15 +897,6 @@ __metadata:
   version: 2.4.3
   resolution: "@types/prettier@npm:2.4.3"
   checksum: b240434daabac54700c862b0bb52a83fec396e0e9c847447119ba41fd8404d79aadfa174e6306fb094b29efadac586344b7606c3a71c286b71755ab2579d54df
-  languageName: node
-  linkType: hard
-
-"@types/sinon@npm:*":
-  version: 10.0.10
-  resolution: "@types/sinon@npm:10.0.10"
-  dependencies:
-    "@sinonjs/fake-timers": ^7.1.0
-  checksum: 3169f8a53adcabeb44418f6cf3340c565653044164d9deb87602747142f0ee7a1d51be9dc2d2840aa77d6358c76e90c58ba0815f358724f67241f5e71d2bc12d
   languageName: node
   linkType: hard
 
@@ -1195,14 +1134,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/esbuild-plugin-pnp@npm:^2":
-  version: 2.0.0
-  resolution: "@yarnpkg/esbuild-plugin-pnp@npm:2.0.0"
+"@yarnpkg/esbuild-plugin-pnp@npm:^2.0.1-rc.2":
+  version: 2.0.1-rc.2
+  resolution: "@yarnpkg/esbuild-plugin-pnp@npm:2.0.1-rc.2"
   dependencies:
     tslib: ^1.13.0
   peerDependencies:
     esbuild: ">=0.10.0"
-  checksum: 7b98034f4c0931aa15e9cb2c77c5c485d89df3af31f1ea8223411f8880a2fbe88377d9f71ff45c04aecbcc8b2b47e167991a0f948dc2ec1f4a6ee026fea1fe9d
+  checksum: 395915721cefbda98d34b7eb2d3a88b848df9ebd88444269fb2028186ddbc6f8c519b3af0109aeee9ee4dded33225e8f41504ec9af6bcbb94730849d95f4efdc
   languageName: node
   linkType: hard
 
@@ -2689,7 +2628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-oclif@npm:^4":
+"eslint-config-oclif@npm:^4.0.0":
   version: 4.0.0
   resolution: "eslint-config-oclif@npm:4.0.0"
   dependencies:
@@ -3190,22 +3129,6 @@ __metadata:
     iconv-lite: ^0.4.24
     tmp: ^0.0.33
   checksum: 1c2a616a73f1b3435ce04030261bed0e22d4737e14b090bb48e58865da92529c9f2b05b893de650738d55e692d071819b45e1669259b2b354bc3154d27a698c7
-  languageName: node
-  linkType: hard
-
-"fancy-test@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "fancy-test@npm:2.0.0"
-  dependencies:
-    "@types/chai": "*"
-    "@types/lodash": "*"
-    "@types/node": "*"
-    "@types/sinon": "*"
-    lodash: ^4.17.13
-    mock-stdin: ^1.0.0
-    nock: ^13.0.0
-    stdout-stderr: ^0.1.9
-  checksum: 77082b8da3fdfc1d333e51e4d71a440a0bbe5a5147c4e54bda8dfc6c807bd3610726c0d2676b97dd0f4b55d37807168ee4f9ccfb51902e27d4ca8a908f68f110
   languageName: node
   linkType: hard
 
@@ -4474,13 +4397,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-stringify-safe@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "json-stringify-safe@npm:5.0.1"
-  checksum: 48ec0adad5280b8a96bb93f4563aa1667fd7a36334f79149abd42446d0989f2ddc58274b479f4819f1f00617957e6344c886c55d05a4e15ebb4ab931e4a6a8ee
-  languageName: node
-  linkType: hard
-
 "json5@npm:^1.0.1":
   version: 1.0.1
   resolution: "json5@npm:1.0.1"
@@ -4655,14 +4571,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.set@npm:^4.3.2":
-  version: 4.3.2
-  resolution: "lodash.set@npm:4.3.2"
-  checksum: a9122f49eef9f2d0fc9061a33d87f8e5b8c6b23d46e8b9e9ce1529d3588d79741bd1145a3abdfa3b13082703e65af27ff18d8a07bfc22b9be32f3fc36f763f70
-  languageName: node
-  linkType: hard
-
-"lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -4985,13 +4894,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mock-stdin@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "mock-stdin@npm:1.0.0"
-  checksum: da038fae5cc189915e4865cbcb0a0b71e98a7e8569959423ac6e798d5e626bc12708c9918d98c46a5aab35d8d8f8bfa782dce25532173137a69fc162990eda91
-  languageName: node
-  linkType: hard
-
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -5074,18 +4976,6 @@ __metadata:
   version: 1.0.5
   resolution: "nice-try@npm:1.0.5"
   checksum: 0b4af3b5bb5d86c289f7a026303d192a7eb4417231fe47245c460baeabae7277bcd8fd9c728fb6bd62c30b3e15cd6620373e2cf33353b095d8b403d3e8a15aff
-  languageName: node
-  linkType: hard
-
-"nock@npm:^13.0.0":
-  version: 13.2.3
-  resolution: "nock@npm:13.2.3"
-  dependencies:
-    debug: ^4.1.0
-    json-stringify-safe: ^5.0.1
-    lodash.set: ^4.3.2
-    propagate: ^2.0.0
-  checksum: 037ff302269f7395eeb1ef50d86a1a67847a47856c3dbd27ee8dd82311f80e6dba8778fc78283104fc45374cfce579547f8a7aff9249146cd426e99035715a8f
   languageName: node
   linkType: hard
 
@@ -5359,7 +5249,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oclif@npm:^2":
+"oclif@npm:^2.4.3":
   version: 2.4.3
   resolution: "oclif@npm:2.4.3"
   dependencies:
@@ -5906,13 +5796,6 @@ __metadata:
     err-code: ^2.0.2
     retry: ^0.12.0
   checksum: f96a3f6d90b92b568a26f71e966cbbc0f63ab85ea6ff6c81284dc869b41510e6cdef99b6b65f9030f0db422bf7c96652a3fff9f2e8fb4a0f069d8f4430359429
-  languageName: node
-  linkType: hard
-
-"propagate@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "propagate@npm:2.0.1"
-  checksum: c4febaee2be0979e82fb6b3727878fd122a98d64a7fa3c9d09b0576751b88514a9e9275b1b92e76b364d488f508e223bd7e1dcdc616be4cdda876072fbc2a96c
   languageName: node
   linkType: hard
 
@@ -6604,16 +6487,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stdout-stderr@npm:^0.1.9":
-  version: 0.1.13
-  resolution: "stdout-stderr@npm:0.1.13"
-  dependencies:
-    debug: ^4.1.1
-    strip-ansi: ^6.0.0
-  checksum: 3955a0afa9a483188929796fd9fa9417f845c3bfcd92f132b3ae7d2a862f91a846312e4244f07eb4dd4c5bd2fe95035db5db01679e7d3795d3ea0b772fc7a6f7
-  languageName: node
-  linkType: hard
-
 "stream-shift@npm:^1.0.0":
   version: 1.0.1
   resolution: "stream-shift@npm:1.0.1"
@@ -7052,7 +6925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-detect@npm:4.0.8, type-detect@npm:^4.0.0, type-detect@npm:^4.0.5":
+"type-detect@npm:^4.0.0, type-detect@npm:^4.0.5":
   version: 4.0.8
   resolution: "type-detect@npm:4.0.8"
   checksum: 62b5628bff67c0eb0b66afa371bd73e230399a8d2ad30d852716efcc4656a7516904570cd8631a49a3ce57c10225adf5d0cbdcb47f6b0255fe6557c453925a15
@@ -7150,11 +7023,11 @@ __metadata:
 
 "typescript@patch:typescript@^4.0.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
   version: 4.5.5
-  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=142761"
+  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 858c61fa63f7274ca4aaaffeced854d550bf416cff6e558c4884041b3311fb662f476f167cf5c9f8680c607239797e26a2ee0bcc6467fbc05bfcb218e1c6c671
+  checksum: c05c318d79c690f101d7ffb34cd6c7d6bbd884d3af9cefe7749ad0cd6be43c7082f098280982ca945dcba23fde34a08fed9602bb26540936baf8c0520727d3ba
   languageName: node
   linkType: hard
 

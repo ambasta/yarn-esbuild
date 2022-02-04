@@ -19,7 +19,7 @@
     "lib": [
       "esnext"
     ],
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmitHelpers": true,
     "noEmitOnError": true,
@@ -45,6 +45,9 @@
     "strictPropertyInitialization": true,
     "stripInternal": true,
     "target": "ESNext",
+    "types": [
+      "node"
+    ],
     "useUnknownInCatchVariables": true
   },
   "include": [
