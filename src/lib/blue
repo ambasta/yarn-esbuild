@@ -1,0 +1,15 @@
+    sourcefile: {
+      string: true,
+      desc: "Set the source file for the source map (for stdin)",
+      group: "Advanced options",
+    },
+    version: {
+      boolean: true,
+      desc: "Print the current version and exit",
+      group: "Advanced options",
+    },
+    serveDir: {
+      string: true,
+      desc: "What to serve in addition to generated output files",
+      group: "Advanced options",
+    },

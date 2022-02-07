@@ -1,0 +1,76 @@
+.coerce("define", (values: string[]) =>
+  values.reduce((defines, current) => {
+    const [identifier, expression] = current.split("=");
+
+    if (!expression) throw new Error(`Invalid define: ${current}`);
+    return {
+      ...defines,
+      [identifier]: expression,
+    };
+  }, {} as MapType)
+)
+.coerce(
+  "loader",
+  (values: string[]): MapType<Loader> =>
+    values.reduce((loader, current) => {
+      const [ext, type] = current.split(":");
+
+      if (!type) throw new Error(`Invalid loader: ${current}`);
+
+      if (!Object.values<string>(LoaderOptions).includes(type))
+        throw new Error(
+          `Invalid loader type: ${type} for extension: ${ext}`
+        );
+      return {
+        ...loader,
+        [ext]: type as Loader,
+      };
+    }, {} as MapType<Loader>)
+)
+.coerce("banner", (values: string[]) =>
+  values.reduce((banners, current) => {
+    const [type, comment] = current.split("=");
+
+    if (!comment) throw new Error(`Invalid banner: ${current}`);
+    return {
+      ...banners,
+      [type]: comment,
+    };
+  }, {} as MapType)
+).coerce("drop", (values: string[]) => values.map((value) => value as Drop))
+entry-name: {
+  string: true,
+  desc: 'Path template to use for entry point output paths (default "[dir]/[name]", can also use "[hash]")',
+  group: "Advanced options",
+}).coerce("footer", (values: string[]) =>
+  values.reduce((footers, current) => {
+    const [type, comment] = current.split("=");
+
+    if (!comment) throw new Error(`Invalid footer: ${current}`);
+    return {
+      ...footers,
+      [type]: comment,
+    };
+  }, {} as MapType)
+)
+.coerce("out-extension", (values: string[]) =>
+  values.reduce((outExtension, current) => {
+    const [extIn, extOut] = current.split("=");
+
+    if (!extOut) throw new Error(`Invalid out-extension: ${current}`);
+    return {
+      ...outExtension,
+      [extIn]: extOut,
+    };
+  }, {} as MapType)
+).coerce("sourcemap", (value: boolean | string) => {
+  if (typeof value === "string") {
+    if (!Object.values<string>(SourceMapOptions).includes(value))
+      throw new Error(`Invalid sourcemap: ${value}`);
+    return value as SourceMapOptions;
+  }
+  return value;
+})
+
+
+    
